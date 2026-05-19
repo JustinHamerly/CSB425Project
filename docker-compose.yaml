@@ -1,0 +1,12 @@
+services:
+  fetch:
+    build: .
+    volumes:
+      - ./data:/app/data
+    command: python /app/jobs/fetch.py
+
+  store:
+    build: .
+    volumes:
+      - ./data:/app/data
+    command: python /app/jobs/store.py
